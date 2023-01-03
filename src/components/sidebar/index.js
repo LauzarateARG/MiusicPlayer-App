@@ -21,7 +21,9 @@ export default function Slidebar() {
         <Sidebarbutton title='Favorites' to='/favorites' icon={<CgHeart className='icon-btn'/>}/>
         <Sidebarbutton title='Library' to="/" icon={<CgAlbum className='icon-btn'/>}/>
       </div>
-      <Sidebarbutton title='Sing Out' to='' icon={<CgArrowRightR className='icon-btn'/>}/>
+      <div>
+        <Sidebarbutton title='SingOut' to='' icon={<CgArrowRightR className='icon-btn'/>}/>
+      </div>
     </div>
   )
 }

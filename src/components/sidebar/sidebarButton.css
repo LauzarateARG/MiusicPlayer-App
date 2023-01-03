@@ -3,15 +3,26 @@ a {
 }
 
 .btn-body{
-    height: 60px;
-    width: 60px;
-    border-radius: 20px;
+    height: 70px;
+    width: 100px;
+    border-bottom-left-radius: 60px;
+    border-top-left-radius: 60px;
     color: #7209B7;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+.btn-body:hover{
+  transition: all 0.5s;
+  background-color: #7209B7;
+  color: #84CAE7;
+}
+.btn-body.active{
+  background-color: #7209B7;
+  color: #84CAE7;
+}
 .btn-title{
     margin: 4px auto;
+    font-weight: 600px;
 }
