@@ -1,0 +1,33 @@
+.login-page{
+    height: 100vh;
+    width: 100vw;
+    background: url(../../img/lanfingPageSpotify.png) no-repeat center center fixed ;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 250px;
+    margin-left: 150px; 
+    height: 50px;
+    width: 200px;
+    border: none;
+    background: #F72585;
+    color: #3A0CA3;
+    font-size: 18px;
+    font-style: oblique;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.login-btn:hover{
+    background: none;
+    color: #F72585;
+    border: solid 3px #F72585;
+}
