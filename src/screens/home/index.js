@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { setClientToken } from "../../spotify"; 
 import Favorites from "../favorites";
 import Feed from "../feed";
 import Library from "../library/index.js";
@@ -15,14 +16,17 @@ export default function Home() {
   useEffect(() => {
     const token = window.localStorage.getItem("token")
     const hash = window.location.hash;
-    window.location.hash = ""
     if(!token && hash){
       const hash = window.location.hash;
       const _token = hash.split("&")[0].split("=")[1];
       window.localStorage.setItem("token", _token);
       setToken(_token);
+      setClientToken(_token);
+      window.location.hash = ""
     }else{
       setToken(token)
+      setClientToken(token);
+      window.location.hash = ""
     }
   }, []);
 
