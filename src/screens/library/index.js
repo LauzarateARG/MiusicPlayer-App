@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import APIkit from "../../spotify.js";
+import Card from "../../components/card/index.js";
+import "./library.css"
 
 export default function Library() {
   const [playlists, setPlaylists] = useState(null);
@@ -7,14 +9,17 @@ export default function Library() {
   useEffect(() => {
     APIkit.get("me/playlists").then((res) => {
       setPlaylists(res.data.items);
-      console.log(playlists)
+      console.log(playlists);
     });
   }, []);
-  return <div className="screen-container">
-    {
-      playlists?.map((playlist) => (
-        <div>{playlist.name}</div>
-      ))
-    }
-  </div>;
+
+  return (
+    <div className="screen-container">
+      <div className="library-body">
+        {playlists?.map((playlist) => (
+          <Card playlist={playlist}/>
+        ))}
+      </div>
+    </div>
+  );
 }

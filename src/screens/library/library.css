@@ -1,0 +1,9 @@
+.library-body{
+    width: 92%;
+    height: 87%;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: space-between;
+}
